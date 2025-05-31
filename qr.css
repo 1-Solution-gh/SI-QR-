@@ -1,0 +1,361 @@
+    /* Modern Color Scheme */
+:root {
+    --primary: #4361ee;
+    --primary-dark: #3a56d4;
+    --primary-light: #eef2ff;
+    --secondary: #f8f9fa;
+    --text: #2b2d42;
+    --text-light: #6c757d;
+    --border: #e9ecef;
+    --error: #ef233c;
+    --success: #2ec4b6;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --radius: 10px;
+    --transition: all 0.2s ease;
+  }
+  
+  /* Base Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.5;
+    color: var(--text);
+    background-color: #f8fafc;
+  }
+  
+  /* Layout */
+  .app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .app-header {
+    background-color: white;
+    padding: 1rem 2rem;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .app-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+  }
+  
+  .app-content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  /* Cards */
+  .card {
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Sections */
+  .section-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .section-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .subtitle {
+    color: var(--text-light);
+    font-size: 0.95rem;
+  }
+  
+  .qr-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+  
+  /* QR Section */
+  .qr-section {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .qr-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+  
+  .divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .divider::before {
+    margin-right: 1rem;
+  }
+  
+  .divider::after {
+    margin-left: 1rem;
+  }
+  
+  /* Form Styles */
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1.25rem;
+    width: 100%;
+  }
+  
+  .form-row.dual-inputs {
+    gap: 1.25rem;
+  }
+  
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+  
+  input, select {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    transition: var(--transition);
+    background-color: white;
+  }
+  
+  input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-light);
+  }
+  
+  input::placeholder {
+    color: #adb5bd;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    font-size: 0.95rem;
+  }
+  
+  .btn-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .primary-btn {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .primary-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+  }
+  
+  .secondary-btn {
+    background-color: white;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+  }
+  
+  .secondary-btn:hover {
+    background-color: var(--primary-light);
+  }
+  
+  .text-btn {
+    background: transparent;
+    color: var(--primary);
+    padding: 0.75rem 0;
+  }
+  
+  .text-btn:hover {
+    text-decoration: underline;
+  }
+  
+  .action-buttons .btn {
+    width: 100%;
+  }
+  
+  /* Terms Checkbox */
+  .terms-container {
+    margin: 0.5rem 0;
+  }
+  
+  .checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .checkbox-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.4;
+  }
+  
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+    flex-shrink: 0;
+  }
+  
+  .link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Form Actions */
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid var(--border);
+  }
+  
+  .submit-btn {
+    padding: 0.75rem 2rem;
+  }
+  
+  /* Dialog Box */
+  .dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .dialog-box {
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .dialog-box h3 {
+    margin-bottom: 1rem;
+  }
+  
+  .dialog-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .app-content {
+      padding: 1.5rem;
+    }
+    
+    .card {
+      padding: 1.75rem;
+    }
+    
+    .form-row.dual-inputs {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .form-actions {
+      flex-direction: column-reverse;
+      gap: 1rem;
+    }
+    
+    .submit-btn {
+      width: 100%;
+    }
+    
+    .text-btn {
+      text-align: center;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .app-header {
+      padding: 1rem;
+    }
+    
+    .app-content {
+      padding: 1rem;
+    }
+    
+    .card {
+      padding: 1.5rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.35rem;
+    }
+    
+    .btn {
+      padding: 0.75rem 1rem;
+    }
+  }

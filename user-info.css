@@ -1,0 +1,112 @@
+   :root {
+      --main-color: #4f46e5;
+      --bg-color: #f9fafb;
+      --accent-color: #d1d5db;
+      --text-color: #111827;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+     .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+
+.app-name {
+  font-size: 1.75rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #00eaff, #ff00f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.2px;
+  text-shadow: 0 0 5px #00aaff;
+  transition: transform 0.2s ease;
+}
+
+.app-name:hover {
+  transform: scale(1.08);
+}
+
+    .container {
+      max-width: 600px;
+      width: 90%;
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .form-container h1 {
+      text-align: center;
+      color: var(--main-color);
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid var(--accent-color);
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .scan-btn {
+      width: 100%;
+      padding: 1rem;
+      background: var(--main-color);
+      border: none;
+      color: white;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .scan-btn:hover {
+      background: #4338ca;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        padding: 1.5rem;
+      }
+
+      .form-container h1 {
+        font-size: 1.5rem;
+      }
+
+      input {
+        font-size: 0.95rem;
+      }
+    }

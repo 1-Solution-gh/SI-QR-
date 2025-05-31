@@ -1,0 +1,245 @@
+<!-- Add this to your HTML file -->
+<div class="screen" id="add-screen">
+    <div class="page-header">
+        <div class="page-title">
+            <h1>Add New Item</h1>
+            <p>Select what you want to add from the options below</p>
+        </div>
+    </div>
+
+    <div class="add-type-selector">
+        <div class="add-option" data-type="housing">
+            <i class="fas fa-home"></i>
+            <span>Housing Unit</span>
+        </div>
+        <div class="add-option" data-type="resident">
+            <i class="fas fa-user"></i>
+            <span>Resident</span>
+        </div>
+        <div class="add-option" data-type="event">
+            <i class="fas fa-calendar-alt"></i>
+            <span>Event</span>
+        </div>
+        <div class="add-option" data-type="qr">
+            <i class="fas fa-qrcode"></i>
+            <span>QR Code</span>
+        </div>
+        <div class="add-option" data-type="notification">
+            <i class="fas fa-bell"></i>
+            <span>Notification</span>
+        </div>
+    </div>
+
+    <!-- Housing Form -->
+    <div class="add-form" id="housing-form" style="display:none;">
+        <h3>Add New Housing Unit</h3>
+        <form id="housing-form-data">
+            <div class="form-group">
+                <label for="housing-block">Block</label>
+                <input type="text" id="housing-block" required>
+            </div>
+            <div class="form-group">
+                <label for="housing-unit">Unit Number</label>
+                <input type="text" id="housing-unit" required>
+            </div>
+            <div class="form-group">
+                <label for="housing-wing">Wing</label>
+                <select id="housing-wing" required>
+                    <option value="North">North Wing</option>
+                    <option value="South">South Wing</option>
+                    <option value="East">East Wing</option>
+                    <option value="West">West Wing</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="housing-floor">Floor</label>
+                <input type="number" id="housing-floor" min="1" max="20" required>
+            </div>
+            <div class="form-group">
+                <label for="housing-bedrooms">Bedrooms</label>
+                <input type="number" id="housing-bedrooms" min="1" max="5" required>
+            </div>
+            <div class="form-group">
+                <label for="housing-bathrooms">Bathrooms</label>
+                <input type="number" id="housing-bathrooms" min="1" max="3" step="0.5" required>
+            </div>
+            <div class="form-group">
+                <label for="housing-area">Area (sq.m)</label>
+                <input type="number" id="housing-area" min="20" max="200" required>
+            </div>
+            <div class="form-group">
+                <label for="housing-status">Status</label>
+                <select id="housing-status" required>
+                    <option value="available">Available</option>
+                    <option value="occupied">Occupied</option>
+                    <option value="maintenance">Maintenance</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="housing-image">Image</label>
+                <input type="file" id="housing-image">
+            </div>
+            <button type="submit" class="btn btn-primary">Save Housing Unit</button>
+        </form>
+    </div>
+
+    <!-- Resident Form -->
+    <div class="add-form" id="resident-form" style="display:none;">
+        <h3>Add New Resident</h3>
+        <form id="resident-form-data">
+            <div class="form-group">
+                <label for="resident-name">Full Name</label>
+                <input type="text" id="resident-name" required>
+            </div>
+            <div class="form-group">
+                <label for="resident-email">Email</label>
+                <input type="email" id="resident-email" required>
+            </div>
+            <div class="form-group">
+                <label for="resident-phone">Phone</label>
+                <input type="tel" id="resident-phone" required>
+            </div>
+            <div class="form-group">
+                <label for="resident-housing">Housing Unit</label>
+                <select id="resident-housing" required>
+                    <!-- Will be populated from database -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="resident-movein">Move-in Date</label>
+                <input type="date" id="resident-movein" required>
+            </div>
+            <div class="form-group">
+                <label for="resident-status">Status</label>
+                <select id="resident-status" required>
+                    <option value="active">Active</option>
+                    <option value="pending">Pending</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="resident-avatar">Avatar</label>
+                <input type="file" id="resident-avatar">
+            </div>
+            <button type="submit" class="btn btn-primary">Save Resident</button>
+        </form>
+    </div>
+
+    <!-- Event Form -->
+    <div class="add-form" id="event-form" style="display:none;">
+        <h3>Add New Event</h3>
+        <form id="event-form-data">
+            <div class="form-group">
+                <label for="event-title">Title</label>
+                <input type="text" id="event-title" required>
+            </div>
+            <div class="form-group">
+                <label for="event-description">Description</label>
+                <textarea id="event-description" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="event-date">Date</label>
+                <input type="date" id="event-date" required>
+            </div>
+            <div class="form-group">
+                <label for="event-start">Start Time</label>
+                <input type="time" id="event-start" required>
+            </div>
+            <div class="form-group">
+                <label for="event-end">End Time</label>
+                <input type="time" id="event-end" required>
+            </div>
+            <div class="form-group">
+                <label for="event-location">Location</label>
+                <input type="text" id="event-location" required>
+            </div>
+            <div class="form-group">
+                <label for="event-organizer">Organizer</label>
+                <input type="text" id="event-organizer" required>
+            </div>
+            <div class="form-group">
+                <label for="event-status">Status</label>
+                <select id="event-status" required>
+                    <option value="upcoming">Upcoming</option>
+                    <option value="ongoing">Ongoing</option>
+                    <option value="completed">Completed</option>
+                    <option value="cancelled">Cancelled</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="event-image">Image</label>
+                <input type="file" id="event-image">
+            </div>
+            <button type="submit" class="btn btn-primary">Save Event</button>
+        </form>
+    </div>
+
+    <!-- QR Code Form -->
+    <div class="add-form" id="qr-form" style="display:none;">
+        <h3>Generate New QR Code</h3>
+        <form id="qr-form-data">
+            <div class="form-group">
+                <label for="qr-title">Title</label>
+                <input type="text" id="qr-title" required>
+            </div>
+            <div class="form-group">
+                <label for="qr-location">Location</label>
+                <input type="text" id="qr-location" required>
+            </div>
+            <div class="form-group">
+                <label for="qr-type">QR Type</label>
+                <select id="qr-type" required>
+                    <option value="housing">Housing Unit</option>
+                    <option value="common">Common Area</option>
+                    <option value="facility">Facility</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="qr-target">Specific Target (if applicable)</label>
+                <select id="qr-target">
+                    <option value="">None</option>
+                    <!-- Will be populated with housing units if type is housing -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate QR Code</button>
+        </form>
+    </div>
+
+    <!-- Notification Form -->
+    <div class="add-form" id="notification-form" style="display:none;">
+        <h3>Create New Notification</h3>
+        <form id="notification-form-data">
+            <div class="form-group">
+                <label for="notification-title">Title</label>
+                <input type="text" id="notification-title" required>
+            </div>
+            <div class="form-group">
+                <label for="notification-message">Message</label>
+                <textarea id="notification-message" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="notification-type">Type</label>
+                <select id="notification-type" required>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="event">Event</option>
+                    <option value="security">Security</option>
+                    <option value="general">General</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="notification-recipients">Recipients</label>
+                <select id="notification-recipients" required>
+                    <option value="all">All Residents</option>
+                    <option value="specific">Specific Housing Units</option>
+                </select>
+            </div>
+            <div class="form-group" id="specific-units-group" style="display:none;">
+                <label>Select Housing Units</label>
+                <div id="housing-units-checkboxes">
+                    <!-- Will be populated with checkboxes for each housing unit -->
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Notification</button>
+        </form>
+    </div>
+</div>
