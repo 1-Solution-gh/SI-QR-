@@ -1,0 +1,800 @@
+
+
+ /* ===== Housing Styles ===== */
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  
+  .property-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  .property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .property-info {
+    padding: 1.25rem;
+  }
+  
+  .property-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+  
+  .price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+  
+  .features {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+  }
+  
+  .sort-filter {
+    display: flex;
+    align-items: center;
+  }
+  
+  .sort-select {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background-color: var(--white);
+    font-size: 0.9rem;
+  }
+  
+  /* ===== Transportation Styles ===== */
+  .transport-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+  }
+  
+  .transport-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .tab {
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+  }
+  
+  .tab.active {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+  }
+  
+  .tab:not(.active):hover {
+    background: var(--secondary);
+  }
+  
+  .map-container {
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .map-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .transport-options {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .option .icon {
+    font-size: 1.75rem;
+  }
+  
+  .option h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .option p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+  }
+  
+  /* ===== Emergency Styles ===== */
+  .emergency-header {
+    background: linear-gradient(135deg, #ff4d4d 0%, #f94444 100%);
+    color: white;
+  }
+  
+  .emergency-header h2 {
+    color: white;
+  }
+  
+  .emergency-header .back-button a {
+    color: white;
+  }
+  
+  .emergency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .emergency-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .emergency-btn:hover {
+    transform: scale(1.03);
+  }
+  
+  .emergency-btn.red {
+    background: linear-gradient(135deg, #ff4d4d 0%, #f94444 100%);
+  }
+  
+  .emergency-btn.orange {
+    background: linear-gradient(135deg, #ff9500 0%, #ff7300 100%);
+  }
+  
+  .emergency-btn.blue {
+    background: linear-gradient(135deg, #4a6bff 0%, #3a5bef 100%);
+  }
+  
+  .emergency-btn .icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .emergency-btn h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .emergency-btn .number {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .hospital-card {
+    grid-column: 1 / -1;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .hospital-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .hospital-card p {
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+  }
+  
+  .hospital-card .general-btn {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  /* ===== Events Styles ===== */
+  .events-calendar {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .calendar-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .calendar-navigation h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .btn-secondary {
+    background: var(--secondary);
+    color: var(--primary);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .events-list {
+    margin-top: 1.5rem;
+  }
+  
+  .event-card {
+    background: var(--secondary);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .event-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .event-card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+  }
+  
+  /* ===== Shopping Styles ===== */
+  .search-bar {
+    flex: 1;
+    max-width: 200px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+  
+  .shopping-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .category-card {
+    border: none;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .category-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .category-card .icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .category-card h3 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .featured-stores h3 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 1rem;
+  }
+  
+  .store-card {
+    display: flex;
+    gap: 1rem;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .store-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .store-info {
+    flex: 1;
+  }
+  
+  .store-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .store-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+  }
+  
+  .store-info .general-btn {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  /* ===== Schools Styles ===== */
+  .schools-map {
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .schools-map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .grade-filter {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background-color: var(--white);
+    font-size: 0.9rem;
+  }
+  
+  .school-cards {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .school-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .school-type {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .school-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .school-details {
+    margin-bottom: 1.5rem;
+  }
+  
+  .school-details p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+  }
+  
+  /* ===== Fun/Dining Styles ===== */
+  .restaurant-filters {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scrollbar-width: none;
+  }
+  
+  .restaurant-filters::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .filter-chip {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .filter-chip.active {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+  }
+  
+  .filter-chip:not(.active):hover {
+    background: var(--secondary);
+  }
+  
+  .restaurant-list {
+    margin-top: 1rem;
+  }
+  
+  .restaurant-card {
+    display: flex;
+    gap: 1rem;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .restaurant-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .restaurant-details {
+    flex: 1;
+  }
+  
+  .restaurant-name {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .restaurant-cuisine {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+  }
+  
+  .restaurant-info {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+  }
+  
+  .restaurant-rating {
+    font-size: 0.9rem;
+    color: #ff9500;
+  }
+  
+  /* ===== Jobs Styles ===== */
+  .job-search {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .job-search input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  
+  .job-search select {
+    padding: 0 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  
+  .job-listings {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .job-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+  }
+  
+  .job-card.urgent {
+    border-left: 4px solid #ff4d4d;
+  }
+  
+  .job-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #fff2f2;
+    color: #ff4d4d;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .job-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .job-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  /* ===== Waste Management Styles ===== */
+  .waste-schedule {
+    display: grid;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .schedule-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .schedule-card.today {
+    background: var(--primary);
+    color: var(--white);
+  }
+  
+  .schedule-card.today h3,
+  .schedule-card.today p {
+    color: var(--white);
+  }
+  
+  .waste-icon {
+    font-size: 1.75rem;
+  }
+  
+  .schedule-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .schedule-card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+  }
+  
+  .recycling-locations {
+    margin-top: 2rem;
+  }
+  
+  .recycling-locations h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .location-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1rem;
+  }
+  
+  .location-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .location-card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .property-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .shopping-categories {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .emergency-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .job-search {
+      flex-direction: column;
+    }
+    
+    .dynamic-header {
+      flex-wrap: wrap;
+    }
+    
+    .sort-filter,
+    .search-bar {
+      order: 3;
+      width: 100%;
+      max-width: 100%;
+      margin-top: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .features,
+    .job-meta,
+    .restaurant-info {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .store-card,
+    .restaurant-card {
+      flex-direction: column;
+    }
+    
+    .store-card img,
+    .restaurant-image {
+      width: 100%;
+      height: 150px;
+    }
+  }
+
+  /* ===== Enhanced Button Styles ===== */
+.general-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+  }
+  
+  .general-btn:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .general-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .general-btn i {
+    font-size: 0.9em;
+  }
+  
+  /* Secondary Button Variant */
+  .btn-secondary {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .btn-secondary:hover {
+    background-color: rgba(47, 128, 237, 0.2);
+  }
+  
+  /* Small Button Variant */
+  .btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  /* Outline Button Variant */
+  .btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+  }
+  
+  .btn-outline:hover {
+    background: rgba(47, 128, 237, 0.1);
+  }
+  
+  /* Danger Button Variant */
+  .btn-danger {
+    background-color: var(--error);
+  }
+  
+  .btn-danger:hover {
+    background-color: #e53935;
+  }
+  
+  /* Success Button Variant */
+  .btn-success {
+    background-color: var(--success);
+  }
+  
+  .btn-success:hover {
+    background-color: #43a047;
+  }

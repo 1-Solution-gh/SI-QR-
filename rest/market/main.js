@@ -1,0 +1,1 @@
+echo isset($place['websiteUri']) ? "<p><a href='" . htmlspecialchars($place['websiteUri']) . "' target='_blank'>Visit Website</a></p>" : "Not Available";
